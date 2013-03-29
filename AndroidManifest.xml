@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.qq.worldwind.android"
+      android:installLocation="auto" android:versionCode="2" android:versionName="0.2 Beta">
+<supports-screens android:anyDensity="true" android:resizeable="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"></supports-screens>
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+
+
+    <application android:label="@string/app_name" android:icon="@drawable/qworld" android:debuggable="false">
+        <activity android:name="WorldWindAndroid"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".layer.LayerManagerActivity"></activity>
+        <activity android:name=".layer.AddLayerActivity"></activity>
+
+    </application>
+    <uses-sdk android:minSdkVersion="10" 
+          android:targetSdkVersion="10" />
+</manifest>
